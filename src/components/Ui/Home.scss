@@ -1,0 +1,16 @@
+.home-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 970px;
+  color: rgb(241, 219, 219);
+  background-color: rgb(91, 92, 167);
+  .home-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  p {
+    margin: 10px;
+  }
+}
