@@ -1,0 +1,197 @@
+.chooseTemplate-container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(91, 92, 167);
+  display: flex;
+
+  @media only screen and (max-width: 950px) {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 20vh;
+  }
+
+  a:hover {
+    color: white;
+  }
+  .change-btn{
+    // background-color: #7986cb;
+    font-size: 15px;
+    color: white;
+    border-radius: 7px;
+    box-shadow: 0 7px 0px #b59f3f;
+    display: inline-block;
+    transition: all .2s;
+    position: relative;
+    padding: 5px 15px;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    margin: 0 20px;
+    font-weight: 600;
+    z-index: 10;
+
+    &:active {
+        top: 3px;
+        box-shadow: 0 2px 0px #3f51b5;
+        transition: all .2s;
+    }
+    .change-btn:hover{
+      background-color: rgb(2, 88, 2);
+    }
+    
+  }
+
+  &-themes {
+    background-color: rgb(91, 92, 167);
+    color: rgb(241, 219, 219);
+    width: 60%;
+    height: 100%;
+    padding-inline: 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px 0;
+    position: relative;
+
+    @media only screen and (max-width: 1215px) {
+      width: 52%;
+      padding-inline: 40px;
+      align-items: center;
+    }
+
+    @media only screen and (max-width: 950px) {
+      width: 100%;
+      height: 550px;
+    }
+
+    &-header {
+      display: flex;
+      flex-direction: column;
+      gap: 15px 0;
+
+      @media only screen and (max-width: 1215px) {
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 50px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+      }
+
+      p {
+        width: 70%;
+        font-size: 18px;
+        line-height: 30px;
+        @media only screen and (max-width: 500px) {
+          // text-align: center;
+          width: 90%;
+        }
+      }
+    }
+
+    &-colors {
+      width: 400px;
+      height: auto;
+      border: 1px solid gray;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 10px;
+
+      @media only screen and (max-width: 500px) {
+        width: 325px;
+      }
+
+      div {
+        width: 60px;
+        height: 60px;
+        background-color: black;
+        border-radius: 5px;
+        cursor: pointer;
+        @media only screen and (max-width: 500px) {
+          width: 50px;
+          height: 50px;
+        }
+
+        &.selected {
+          padding: 20px;
+        }
+      }
+    }
+
+    &-select {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      @media only screen and (max-width: 1215px) {
+        justify-content: center;
+      }
+
+      a {
+        text-decoration: none;
+        background: #ffcd39;
+        font-size: 18px;
+        color: rgb(8, 8, 8);
+        border-radius: 7px;
+        box-shadow: 0 5px 0px #3f51b5;
+        display: inline-block;
+        transition: all 0.2s;
+        padding: 10px 15px;
+        top: 0;
+        font-weight: 600;
+        cursor: pointer;
+
+        &:active {
+          top: 3px;
+          box-shadow: 0 2px 0px #3f51b5;
+          transition: all 0.2s;
+        }
+      }
+      a:hover{
+        background: rgb(1, 85, 1);
+      }
+    }
+
+    &-arrows {
+      width: 90px;
+      height: 90px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  &-template {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: 1215px) {
+      width: 48%;
+    }
+
+    @media only screen and (max-width: 950px) {
+      width: 100%;
+      padding-bottom: 35px;
+    }
+
+    @media only screen and (max-width: 550px) {
+      width: 80%;
+      padding-bottom: 35px;
+    }
+  }
+}

@@ -2,7 +2,8 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Pages/Home";
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Create from "./components/Pages/Create";
+import ChooseTemplate from "./components/Pages/ChooseTemplate";
+import ImportResume from "./ImportResume/ImportResume";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <div className="wrapper">
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/create" element={<Create />} />
+          <Route path="/chooseTemplate" element={<ChooseTemplate />} />
+          <Route path="/importResume" element={<ImportResume />} />
         </Routes>
       </div>
     </div>
