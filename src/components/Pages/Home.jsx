@@ -60,7 +60,7 @@ const Home = () => {
             </>
           ) : (
             <h2 style={{ textAlign: "center" }}>
-              უახლესი რეზიუმე ვერ მოიძებნა
+              Latest Resume Not Found
             </h2>
           )}
         </div>
