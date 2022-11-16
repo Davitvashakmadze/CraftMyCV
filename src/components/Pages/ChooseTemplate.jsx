@@ -12,7 +12,7 @@ import "../Ui/ChooseTemplate.scss";
 import AngoraTheme from "../AngoraTheme/AngoraTheme";
 import BlueprintTheme from "../BlueprintTheme/BlueprintTheme";
 
-export default function ChooseTemplate() {
+const ChooseTemplate = () => {
   const themeNameRef = useRef();
   const themeAboutRef = useRef();
 
@@ -96,7 +96,9 @@ export default function ChooseTemplate() {
         </div>
         <div className="chooseTemplate-container-themes-arrows">
           <div title="Change Theme" onClick={changeTheme}>
-            <Button className="change-btn" color="warning">Change Theme</Button>
+            <Button className="change-btn" color="warning">
+              Change Theme
+            </Button>
           </div>
         </div>
       </div>
@@ -113,4 +115,6 @@ export default function ChooseTemplate() {
       </div>
     </div>
   );
-}
+};
+
+export default ChooseTemplate;
