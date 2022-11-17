@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import ChooseTemplate from "./components/Pages/ChooseTemplate";
 import ImportResume from "./ImportResume/ImportResume";
 import CreateResume from "./components/Create/CreateResume";
+import Export from "./components/Export/Export";
+import StoredResumes from "./components/StoredResumes/StoredResumes";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Route path="/chooseTemplate" element={<ChooseTemplate />} />
           <Route path="/importResume" element={<ImportResume />} />
           <Route path="/create" element={<CreateResume />} />
+          <Route path="/export" element={<Export />} />
+          <Route path="/stored_resumes" element={<StoredResumes />} />
         </Routes>
       </div>
     </div>

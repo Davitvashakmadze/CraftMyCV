@@ -41,14 +41,14 @@ const Home = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr className="home-resume">
                     <td>{parsedJSON.name.split(" ")[0]}</td>
                     <td>{parsedJSON.name.split(" ")[1]}</td>
                     <td>{parsedJSON.date.split(" ").slice(0, 5)}</td>
                   </tr>
                 </tbody>
               </Table>
-              <button
+              <button className="see-more-btn"
                 onClick={() =>
                   navigate("/stored_resumes", {
                     state: localStorage.getItem("resume"),
@@ -59,9 +59,7 @@ const Home = () => {
               </button>
             </>
           ) : (
-            <h2 style={{ textAlign: "center" }}>
-              Latest Resume Not Found
-            </h2>
+            <h2 style={{ textAlign: "center" }}>Latest Resume Not Found</h2>
           )}
         </div>
       </div>

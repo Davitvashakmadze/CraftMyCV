@@ -1,0 +1,42 @@
+.export-container {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(91, 92, 167);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap:20px;
+    padding-block: 20px;
+
+    &-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        div{
+            display:flex;
+            gap:0 35px;
+        }
+
+        button {
+            text-decoration: none;
+            background: #7986cb;
+            font-size: 18px;
+            color: white;
+            border-radius: 7px;
+            box-shadow: 0 5px 0px #3f51b5;
+            display: inline-block;
+            transition: all .2s;
+            padding: 10px 15px;
+            top: 0;
+            font-weight: 600;
+            cursor: pointer;
+
+            &:active {
+                top: 3px;
+                box-shadow: 0 2px 0px #3f51b5;
+                transition: all .2s;
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.stored-resume-container {
+  .home-resume {
+    background-color: yellowgreen;
+  }
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(91, 92, 167);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  table {
+    width: 40%;
+  }
+
+  .go-home-container {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    .go-home {
+      border: none;
+      text-decoration: none;
+      background: #7986cb;
+      font-size: 15px;
+      color: white;
+      border-radius: 7px;
+      box-shadow: 0 5px 0px #3f51b5;
+      transition: all 0.2s;
+      padding: 10px 15px;
+      top: 0;
+      position: relative;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:active {
+        top: 3px;
+        box-shadow: 0 2px 0px #3f51b5;
+        transition: all 0.2s;
+      }
+    }
+    .go-home:hover {
+      background-color: yellowgreen;
+    }
+  }
+}
