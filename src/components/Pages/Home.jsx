@@ -6,7 +6,7 @@ import "../Images/sogo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Table } from "reactstrap";
 import { useNavigate } from "react-router-dom";
-const mainLogo = new URL("../Images/sogo.png", import.meta.url);
+import mainLogo from "../Images/sogo.png";
 
 let parsedJSON;
 if (localStorage.getItem("resume")) {
