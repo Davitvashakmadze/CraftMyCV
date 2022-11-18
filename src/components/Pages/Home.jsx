@@ -42,13 +42,14 @@ const Home = () => {
                 </thead>
                 <tbody>
                   <tr className="home-resume">
-                    <td>{parsedJSON.name.split(" ")[0]}</td>
-                    <td>{parsedJSON.name.split(" ")[1]}</td>
-                    <td>{parsedJSON.date.split(" ").slice(0, 5)}</td>
+                    <td>{parsedJSON.name}</td>
+                    <td>{parsedJSON.name}</td>
+                    <td>{parsedJSON.date.split(" ").slice(0, 5).join(" ")}</td>
                   </tr>
                 </tbody>
               </Table>
-              <button className="see-more-btn"
+              <button
+                className="see-more-btn"
                 onClick={() =>
                   navigate("/stored_resumes", {
                     state: localStorage.getItem("resume"),
