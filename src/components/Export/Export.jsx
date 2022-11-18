@@ -68,7 +68,6 @@ const Export = () => {
   };
 
   const buildAnoutherResume = () => {
-    console.log("bulid click");
     setPopUpCheck(true);
   };
 

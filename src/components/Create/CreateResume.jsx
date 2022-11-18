@@ -15,7 +15,7 @@ const getLocalStorageItems = (arr) => {
   return arr.map((item) => localStorage.getItem(item));
 };
 
-export default function CreateResume() {
+const CreateResume = () => {
   const [userName, phone, mail, address, smry, userExperience, userSkills] =
     getLocalStorageItems([
       "name",
@@ -245,4 +245,5 @@ export default function CreateResume() {
       <ProgressBar findOuFillInput={findOuFillInput} />
     </div>
   );
-}
+};
+export default CreateResume;

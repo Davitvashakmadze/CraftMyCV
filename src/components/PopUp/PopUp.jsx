@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import "./PopUp.scss";
 
-export default function PopUp({ setPopUpCheck }) {
+const PopUp = ({ setPopUpCheck }) => {
   const navigate = useNavigate();
 
   const popUpRef = useRef();
@@ -17,8 +17,11 @@ export default function PopUp({ setPopUpCheck }) {
   });
 
   const handleClickOutside = (e) => {
-    if (!popUpRef.current.contains(e.target) || e.target === closeRef.current) {
+    console.log("click click click");
+    if (e.target === popUpRef.current || e.target === closeRef.current) {
       setPopUpCheck(false);
+    } else {
+      setPopUpCheck(true);
     }
   };
 
@@ -44,16 +47,21 @@ export default function PopUp({ setPopUpCheck }) {
   };
 
   return (
-    <div className="pop-up">
-      <div className="pop-up-inner" ref={popUpRef}>
+    <div className="pop-up" ref={popUpRef}>
+      <div className="pop-up-inner">
         <span ref={closeRef}>❌</span>
 
         <h1>Save this resume?</h1>
         <div>
-          <button className="yes-btn" onClick={saveResume}>YES</button>
-          <button className="no-btn" onClick={clearLocalStorage}>NO</button>
+          <button className="yes-btn" onClick={saveResume}>
+            YES
+          </button>
+          <button className="no-btn" onClick={clearLocalStorage}>
+            NO
+          </button>
         </div>
       </div>
     </div>
   );
-}
+};
+export default PopUp;
