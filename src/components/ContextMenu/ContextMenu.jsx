@@ -27,6 +27,7 @@ const ContextMenu = ({
     ) {
       setShowContentMenu(false);
     }
+    localStorage.clear();
   };
 
   const styles = {

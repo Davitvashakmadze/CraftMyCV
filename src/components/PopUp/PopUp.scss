@@ -8,6 +8,16 @@
   z-index: 40;
 
   &-inner {
+    @keyframes fadeIn {
+      0% {
+         top: 28%;
+      }
+  
+      100% {
+          top: 50%;
+      }
+  }
+    animation: fadeIn 0.5s; 
     text-align: center;
     justify-content: center;
     span {

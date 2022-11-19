@@ -35,14 +35,12 @@ const Home = () => {
               <Table hover>
                 <thead>
                   <tr>
-                    <th>სახელი</th>
-                    <th>გვარი</th>
+                    <th>სახელი - გვარი</th>
                     <th>თარიღი</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="home-resume">
-                    <td>{parsedJSON.name}</td>
                     <td>{parsedJSON.name}</td>
                     <td>{parsedJSON.date.split(" ").slice(0, 5).join(" ")}</td>
                   </tr>

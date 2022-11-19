@@ -34,8 +34,7 @@ const StoredResumes = () => {
       <Table hover>
         <thead>
           <tr>
-            <th>სახელი</th>
-            <th>გვარი</th>
+            <th>სახელი - გვარი</th>
             <th>თარიღი</th>
           </tr>
         </thead>
@@ -46,7 +45,6 @@ const StoredResumes = () => {
               key={resume.id}
               onContextMenu={(e) => contextMenu(e, resume.id)}
             >
-              <td>{resume.name}</td>
               <td>{resume.name}</td>
               <td>{resume.date.split(" ").slice(0, 5).join(" ")}</td>
             </tr>
