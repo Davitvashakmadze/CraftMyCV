@@ -22,7 +22,7 @@ const FormForTheme = ({
   return (
     <Form>
       <Row>
-        <Col md={6}>
+        <Col md={3}>
           <FormGroup>
             <Label for="name">Name</Label>
             <Input
@@ -37,7 +37,7 @@ const FormForTheme = ({
             />
           </FormGroup>
         </Col>
-        <Col md={6}>
+        <Col md={3}>
           <FormGroup>
             <Label htmlFor="tel">Tel:</Label>
             <Input
@@ -54,7 +54,7 @@ const FormForTheme = ({
         </Col>
       </Row>
       <Row>
-        <Col md={6}>
+        <Row md={2}>
           <FormGroup>
             <Label htmlFor="email">Email</Label>
             <Input
@@ -68,8 +68,8 @@ const FormForTheme = ({
               type="email"
             />
           </FormGroup>
-        </Col>
-        <Col md={6}>
+        </Row>
+        <Row md={2}>
           <FormGroup>
             <Label htmlFor="adress">Adress</Label>
             <Input
@@ -83,10 +83,10 @@ const FormForTheme = ({
               id="adress"
             />
           </FormGroup>
-        </Col>
+        </Row>
       </Row>
       <Row>
-        <Col md={6}>
+        <Row md={2}>
           <FormGroup>
             <Label for="summary">Summary</Label>
             <Input
@@ -99,8 +99,8 @@ const FormForTheme = ({
               id="summary"
             />
           </FormGroup>
-        </Col>
-        <Col md={6}>
+        </Row>
+        <Row md={2}>
           <FormGroup>
             <Label htmlFor="skills">Skills:</Label>
             <Input
@@ -114,11 +114,12 @@ const FormForTheme = ({
               id="skills"
             />
           </FormGroup>
-        </Col>
-        <Col md={12}>
+        </Row>
+        <Col md={6}>
           <FormGroup>
             <Label for="experience">Experience</Label>
             <Input
+              type="textarea"
               value={experience}
               placeholder={parsedSavedJSON && parsedSavedJSON.experience}
               onChange={(e) => {
