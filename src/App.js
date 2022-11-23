@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Pages/Home";
-import 'bootstrap/dist/css/bootstrap.min.css'
+import "bootstrap/dist/css/bootstrap.min.css";
 import ChooseTemplate from "./components/Pages/ChooseTemplate";
 import ImportResume from "./ImportResume/ImportResume";
 import CreateResume from "./components/Create/CreateResume";

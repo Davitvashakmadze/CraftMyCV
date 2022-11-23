@@ -5,7 +5,7 @@ export const colorCards = [
         id:Math.random() * 1000000
     },
     {
-        backgroundColor:"aqua",
+        backgroundColor:"green",
         isSelected:false,
         id:Math.random() * 1000000
     },
