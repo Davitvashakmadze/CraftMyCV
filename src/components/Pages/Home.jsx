@@ -41,8 +41,8 @@ const Home = () => {
                 </thead>
                 <tbody>
                   <tr className="home-resume">
-                    <td>{parsedJSON.name}</td>
-                    <td>{parsedJSON.date.split(" ").slice(0, 5).join(" ")}</td>
+                    <td>{parsedJSON?.name}</td>
+                    <td>{parsedJSON?.date.split(" ").slice(0, 5).join(" ")}</td>
                   </tr>
                 </tbody>
               </Table>

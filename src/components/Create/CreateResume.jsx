@@ -32,13 +32,13 @@ const CreateResume = () => {
 
   const [data, setData] = useState({});
   const [disabledChecker, setDisabledChecker] = useState(true);
-  const [name, setName] = useState("");
-  const [number, setNumber] = useState("");
-  const [email, setEmail] = useState("");
-  const [adress, setAdress] = useState("");
-  const [summary, setSummary] = useState("");
-  const [experience, setExperience] = useState("");
-  const [skills, setSkills] = useState("");
+  const [name, setName] = useState(localStorage.getItem("name"));
+  const [number, setNumber] = useState(localStorage.getItem("number"));
+  const [email, setEmail] = useState(localStorage.getItem("email"));
+  const [adress, setAdress] = useState(localStorage.getItem("adress"));
+  const [summary, setSummary] = useState(localStorage.getItem("summary"));
+  const [experience, setExperience] = useState(localStorage.getItem("experience"));
+  const [skills, setSkills] = useState(localStorage.getItem("skills"));
 
   const themeColor = localStorage.getItem("color");
   const themeName = localStorage.getItem("theme");
@@ -50,7 +50,7 @@ const CreateResume = () => {
   let parsedSavedJSON;
 
   if (location.state !== null) {
-    parsedSavedJSON = JSON.parse(location.state.files);
+    parsedSavedJSON = JSON.parse(location.state?.files);
   }
 
   const arrayOfAllInputs = [
@@ -63,7 +63,7 @@ const CreateResume = () => {
     skills,
   ];
 
-  const findOuFillInput = arrayOfAllInputs.filter((e) => e.length > 0).length;
+  const findOuFillInput = arrayOfAllInputs.filter((e) => e?.length > 0)?.length;
 
   useEffect(() => {
     findOuFillInput === 7
